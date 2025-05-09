@@ -94,14 +94,16 @@ section {
     animation: floatImage 4s ease-in-out infinite;
 }
 
-@keyframes floatImage{
-    0%{
+@keyframes floatImage {
+    0% {
         transform: translateY(0);
     }
-    50%{
+
+    50% {
         transform: translateY(-2.4rem);
     }
-    100%{
+
+    100% {
         transform: translateY(0);
     }
 }
@@ -230,7 +232,7 @@ span {
     margin: 2rem 0 3rem;
 }
 
-.about-con{
+.about-con {
     font-size: 1.6rem;
     display: flex;
     gap: 5rem;
@@ -238,6 +240,138 @@ span {
 }
 
 /* About End */
+
+/* Skill start */
+
+.technical-proficiency {
+    padding: 20px;
+    background-color: #f7f7f7;
+    /* Adjust to your theme */
+    border-radius: 8px;
+    /* Optional: for rounded corners */
+}
+
+.technical-proficiency h2 {
+    color: #333;
+    /* Adjust to your theme */
+    margin-bottom: 5px;
+}
+
+.technical-proficiency .subtitle {
+    color: #777;
+    /* Adjust to your theme */
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.proficiency-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* Creates three columns */
+    gap: 20px;
+}
+
+.category h3 {
+    color: var(--text-color);
+    /* Adjust to your theme */
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.skill-item {
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    /* Adjust to your theme */
+}
+
+.progress-bar {
+    background-color: var(--second-bg-color);
+    /* Background of the progress bar */
+    height: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.progress {
+    background-color: var(--main-color);
+    /* Your accent color */
+    height: 100%;
+    border-radius: 5px;
+}
+
+.percentage {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    color: var(--text-color);
+    /* Adjust to your theme */
+    font-size: 1rem;
+}
+
+/* .skill-list{
+    display: flex;
+  } */
+
+.skill-list,
+.language-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-list li {
+    background-color: var(--main-color);
+    /* Light background for the skills */
+    color: var(--bg-color);
+    /* Text color */
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+.bx {
+    font-size: 2rem;
+}
+
+.language-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.language-list li:last-child {
+    border-bottom: none;
+}
+
+.language-name {
+    color: var(--text-color);
+    /* Adjust to your theme */
+    font-size: 1.4rem;
+}
+
+.proficiency {
+    /* Adjust to your theme */
+    font-style: italic;
+    font-size: 1.4rem;
+}
+
+/* Responsive adjustments (optional) */
+@media (max-width: 768px) {
+    .proficiency-grid {
+        grid-template-columns: 1fr;
+        /* Stack columns on smaller screens */
+    }
+}
+
+/* Skill end */
 
 /* service Start */
 .service {
@@ -370,6 +504,156 @@ span {
     background: var(--second-bg-color);
 }
 
+.education-margine{
+    padding: 20px;
+}
+
+.skil-heading {
+    margin-bottom: 50px;
+}
+
+.education .subtitle {
+    color: var(--text-color);
+    /* Adjust to your theme */
+    font-size: 2rem;
+
+    margin-bottom: 70px;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+    /* Space for the timeline line and markers */
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    background-color: var(--main-color);
+    
+    /* Timeline line color */
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-marker {
+    margin-top: 0px;
+    position: absolute;
+    left: -20px;
+    top: 0;
+    background-color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    /* Marker border color */
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    /* Ensure marker is above the line */
+}
+
+.timeline-marker .year {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    /* Year color */
+    margin-top: 0px;
+    position: absolute;
+    top: -25px;
+    left: 5dvh;
+    transform: translateX();
+    white-space: nowrap;
+}
+
+.timeline-item.present .timeline-marker {
+    background-color: var(--main-color);
+    /* Present marker background */
+}
+
+.timeline-item.present .timeline-marker .year {
+    color:var(--text-color);
+    /* Present year color */
+}
+
+
+
+.timeline-item.present .timeline-marker .present-badge {
+    background-color: var(--main-color);
+    /* Present badge background */
+    color: var(--bg-color);
+    /* Present badge text color */
+    font-size: 1rem;
+    padding: 5px 8px;
+    border-radius: 10px;
+    position: absolute;
+    top: -45px;
+    left: 0%;
+    transform: translateX(-70%);
+    white-space: nowrap;
+}
+
+.timeline-content {
+    padding: 10px 20px;
+    background-color: var(--bg-color);
+    /* Content background */
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    /* Optional shadow */
+}
+
+.timeline-content h3 {
+    color: var(--text-color);
+    /* Title color */
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 2rem;
+}
+
+.timeline-content .institution {
+    color: var(--text-color);
+    /* Institution color */
+    font-style: italic;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+.timeline-content .description {
+    color: var(--text-color);
+    /* Description color */
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+/* Adjustments for smaller screens (optional) */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 5px;
+    }
+
+    .timeline-marker {
+        left: -8px;
+    }
+
+    .timeline-marker .year,
+    .timeline-item.present .timeline-marker .present-badge {
+        left: auto;
+        right: -10px;
+        transform: none;
+    }
+
+    .timeline-content {
+        margin-left: 20px;
+    }
+}
+
 /* Education End */
 
 /* Contact Start */
@@ -420,7 +704,7 @@ span {
 }
 
 .text a {
-    color: #1a73e8;
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -638,24 +922,24 @@ span {
 
 @media (max-width:365px) {
     .home-img img {
-        width:90vw;
-    }
-
-    .about-img img{
         width: 90vw;
     }
 
-    .contact-form{
+    .about-img img {
+        width: 90vw;
+    }
+
+    .contact-form {
         width: 70vw;
         margin-top: 4rem;
     }
 
-    .footer{
+    .footer {
         flex-direction: column-reverse;
     }
 
-    .footer p{
-        text-align:center;
+    .footer p {
+        text-align: center;
         margin-top: 2rem;
     }
 }

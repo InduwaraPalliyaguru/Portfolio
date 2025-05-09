@@ -38,7 +38,7 @@ window.onscroll = () => {
 
 /* ====================scroll reveal====================*/
 ScrollReveal({
-    // reset: true,
+    reset: true,
     distance: '80px',
     duration: 2000,
     delay: 200
@@ -49,11 +49,31 @@ ScrollReveal().reveal('.home-img, .services-container, .portfolli-box, .contact 
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
-/* ====================typed js====================*/
-const typed = new Typed('.multiple-text', {
-    strings: ['Full-Stack Software Engineer', 'Java Developer', 'Web Developer', 'UI/UX Enthusiast', 'Lifelong Learner'],
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 1000,
-    loop: true
-});
+    /* ====================typed js====================*/
+    const typed = new Typed('.multiple-text', {
+        strings: ['Full-Stack Software Engineer', 'Java Developer', 'Web Developer', 'UI/UX Enthusiast', 'Lifelong Learner'],
+        typeSpeed: 100,
+        backSpeed: 100,
+        backDelay: 1000,
+        loop: true
+    });
+    /* ====================Skill js====================*/
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const progressBars = document.querySelectorAll('.progress-bar .progress');
+
+        function animateProgress() {
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0%'; // Reset for animation
+                setTimeout(() => {
+                    bar.style.width = width; // Animate to the original width
+                    bar.style.transition = 'width 1s ease-in-out'; // Add transition
+                }, 10);
+            });
+        }
+
+        // You might trigger this animation on page load or when the section is scrolled into view
+        animateProgress();
+    });
