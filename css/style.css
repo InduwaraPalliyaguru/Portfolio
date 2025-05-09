@@ -770,6 +770,61 @@ span {
     flex-wrap: wrap;
 }
 
+/* Responsive Breakpoints */
+@media (max-width: 991px) {
+    .contact {
+        padding: 3rem 5%;
+    }
+
+    .contact-container {
+        flex-direction: column; /* Stack contact card and form */
+        align-items: center;
+    }
+
+    .contact-card {
+        width: 100%; /* Make contact card full width */
+        margin-bottom: 2rem;
+    }
+
+    .contact form .input-box input {
+        width: 100%; /* Make input boxes full width */
+    }
+}
+
+@media (max-width: 768px) {
+    .contact h2 {
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .contact {
+        padding: 3rem 3%;
+    }
+
+    .contact h2 {
+        font-size: 2.8rem;
+    }
+
+    .contact-card h2 {
+        font-size: 2rem;
+    }
+
+    .contact-item .text strong {
+        font-size: 1.5rem;
+    }
+
+    .contact-item .text a {
+        font-size: 1.3rem;
+    }
+
+    .contact form .input-box input,
+    .contact form textarea,
+    .contact form .btn {
+        font-size: 1.5rem;
+    }
+}
+
 /* Contact End */
 
 /* Footer Start */
